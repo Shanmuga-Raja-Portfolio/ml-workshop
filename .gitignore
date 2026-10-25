@@ -1,0 +1,35 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+*.egg-info
+build/
+dist/
+
+# Virtual environments
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Workshop runtime state (written by tools/bootstrap.py)
+workshop_config.json
+
+# uv.lock is machine-specific here: bootstrap regenerates it per platform
+# because each machine pins torch to a different wheel index (cu128/rocm/cpu).
+uv.lock
+
+# Training outputs and runtime-downloaded data (root-level only —
+# lessons/01_foundations/data/ is vendored public-domain content and ships)
+/runs/
+/data/
+
+# Dev scratch scripts stay local
+tools/scratch_*.py
+
+# Hugging Face / model caches
+.cache/
+hf_cache/
+
+# OS junk
+Thumbs.db
+.DS_Store

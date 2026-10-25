@@ -1,0 +1,30 @@
+[project]
+name = "ml-workshop"
+version = "1.0.0"
+description = "A free, hands-on ML course: from scratch to LoRA fine-tuning. MIT-licensed."
+readme = "README.md"
+license = "MIT"
+authors = [{ name = "shanchinraj" }]
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "accelerate>=1.15.0",
+    "bitsandbytes>=0.50.2",
+    "datasets>=5.0.1",
+    "diffusers>=0.40.0",
+    "ipykernel>=7.3.0",
+    "jupyter>=1.1.1",
+    "matplotlib>=3.11.2",
+    "pandas>=3.0.6",
+    "peft>=0.21.0",
+    "scikit-learn>=1.9.1",
+    "torch>=2.11.0",
+    "torchvision>=0.26.0",
+    "transformers>=5.17.0",
+    "trl>=1.13.0",
+]
+
+# NOTE: torch/torchvision are intentionally platform-neutral here.
+# tools/bootstrap.py appends a clearly marked, machine-local
+# [[tool.uv.index]] + [tool.uv.sources] block below at setup time to pin
+# torch to the right PyTorch wheel index (cu128 / rocm) for the local GPU.
+# Do not commit such a block - it must stay machine-specific.

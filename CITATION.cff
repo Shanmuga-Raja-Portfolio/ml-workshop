@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this course in teaching or research, please cite it as below."
+title: "ML Workshop: a hands-on course for training models on your own machine"
+type: software
+authors:
+  - family-names: shanchinraj
+    given-names: ""
+version: "1.0.0"
+date-released: "2026-10-23"
+license: MIT
+repository-code: "https://github.com/Shanmuga-Raja-Portfolio/ml-workshop"
+abstract: >-
+  A free, MIT-licensed, hands-on course that takes learners from training a
+  neural network from scratch to LoRA fine-tuning LLMs and image models,
+  running entirely on consumer hardware.
+keywords:
+  - machine learning
+  - education
+  - fine-tuning
+  - LoRA
+  - diffusion models
+  - Jupyter

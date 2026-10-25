@@ -1,0 +1,79 @@
+[
+  {
+    "id": "qwen3-1.7b",
+    "type": "hf-model",
+    "ref": "Qwen/Qwen3-1.7B",
+    "license": "Apache-2.0",
+    "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "size_hint": "~4 GB",
+    "required_by": [4],
+    "optional": false,
+    "fallback": "Run: hf download Qwen/Qwen3-1.7B  (or let lesson 4 download it on first use; needs ~4GB free and internet)."
+  },
+  {
+    "id": "distilbert-base-uncased",
+    "type": "hf-model",
+    "ref": "distilbert/distilbert-base-uncased",
+    "license": "Apache-2.0",
+    "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "size_hint": "~270 MB",
+    "required_by": [3],
+    "optional": false,
+    "fallback": "Run: hf download distilbert/distilbert-base-uncased  (lesson 3 also auto-downloads on first use)."
+  },
+  {
+    "id": "sst2",
+    "type": "hf-dataset",
+    "ref": "stanfordnlp/sst2",
+    "license": "research-use, see URL",
+    "license_url": "https://huggingface.co/datasets/stanfordnlp/sst2",
+    "size_hint": "~8 MB",
+    "required_by": [3],
+    "optional": false,
+    "fallback": "Run: hf download stanfordnlp/sst2 --repo-type dataset  (lesson 3 also auto-downloads via the datasets library)."
+  },
+  {
+    "id": "stable-diffusion-v1-5",
+    "type": "hf-model",
+    "ref": "stable-diffusion-v1-5/stable-diffusion-v1-5",
+    "license": "CreativeML OpenRAIL-M",
+    "license_url": "https://huggingface.co/spaces/CompVis/stable-diffusion-license",
+    "size_hint": "~4 GB (fp16 variant)",
+    "required_by": [5],
+    "optional": false,
+    "fallback": "Accept the license at https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5 then run: hf download stable-diffusion-v1-5/stable-diffusion-v1-5 --include \"*.safetensors\" --exclude \"*.ckpt\""
+  },
+  {
+    "id": "flux1-schnell",
+    "type": "hf-model",
+    "ref": "black-forest-labs/FLUX.1-schnell",
+    "license": "Apache-2.0",
+    "license_url": "https://www.apache.org/licenses/LICENSE-2.0",
+    "size_hint": "~24 GB",
+    "required_by": [5],
+    "optional": true,
+    "fallback": "Optional bonus model. Run: hf download black-forest-labs/FLUX.1-schnell  (needs ~24GB free)."
+  },
+  {
+    "id": "fashion-mnist",
+    "type": "torchvision-dataset",
+    "ref": "FashionMNIST",
+    "license": "MIT",
+    "license_url": "https://github.com/zalandoresearch/fashion-mnist/blob/master/LICENSE",
+    "size_hint": "~30 MB",
+    "required_by": [5],
+    "optional": false,
+    "fallback": "In Python: torchvision.datasets.FashionMNIST(root='data', download=True)  — or download from https://github.com/zalandoresearch/fashion-mnist"
+  },
+  {
+    "id": "ukiyoe-prints",
+    "type": "url-list",
+    "ref": "downloads/ukiyoe_sources.csv",
+    "license": "public domain (PD-old, artist died >70 years ago)",
+    "license_url": "https://commons.wikimedia.org/wiki/Commons:Licensing",
+    "size_hint": "~40 MB (26 images)",
+    "required_by": [5],
+    "optional": false,
+    "fallback": "Run: uv run python tools/fetch_data.py ukiyoe  — or pick any public-domain ukiyo-e prints from Wikimedia Commons and place them in data/ukiyoe/."
+  }
+]

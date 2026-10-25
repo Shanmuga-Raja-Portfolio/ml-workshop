@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Troubleshooting & FAQ
+    url: https://github.com/Shanmuga-Raja-Portfolio/ml-workshop/blob/main/docs/TROUBLESHOOTING.md
+    about: Most setup and lesson problems are answered here — check first.
